@@ -4,6 +4,7 @@ import { AnimatedHeading } from "@/components/AnimatedHeading";
 import { CaseStudy } from "@/components/CaseStudy";
 import { projects } from "@/data/projects";
 import { site } from "@/data/site";
+import { withBasePath } from "@/lib/base-path";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -51,7 +52,7 @@ export default function HomePage() {
             <div className={styles.portrait}>
               <div className={styles.portraitFrame}>
                 <Image
-                  src="/profile.png"
+                  src={withBasePath("/profile.png")}
                   alt="Saqib Soft — professional portrait"
                   width={480}
                   height={480}

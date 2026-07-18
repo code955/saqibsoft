@@ -1,6 +1,8 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import type { Project } from "@/data/projects";
+import { withBasePath } from "@/lib/base-path";
 import styles from "./CaseStudy.module.css";
 
 type CaseStudyProps = {
@@ -26,7 +28,7 @@ export function CaseStudy({ project, index = 0, compact = false }: CaseStudyProp
         {project.image ? (
           <div className={styles.imageFrame}>
             <Image
-              src={project.image}
+              src={withBasePath(project.image)}
               alt=""
               fill
               sizes="(max-width: 719px) 0px, (max-width: 1023px) 50vw, 40vw"
@@ -99,9 +101,9 @@ export function CaseStudy({ project, index = 0, compact = false }: CaseStudyProp
               Open live project
             </a>
           ) : (
-            <a className="btn btn-secondary" href="/contact">
+            <Link className="btn btn-secondary" href="/contact">
               Request a walkthrough
-            </a>
+            </Link>
           )}
         </div>
       </div>

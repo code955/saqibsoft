@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Project } from "@/data/projects";
 import styles from "./ProjectTile.module.css";
 
@@ -26,9 +27,9 @@ export function ProjectTile({ project, index = 0 }: ProjectTileProps) {
             Visit project
           </a>
         ) : (
-          <a className="btn btn-secondary" href="/contact">
+          <Link className="btn btn-secondary" href="/contact">
             Contact for details
-          </a>
+          </Link>
         )}
       </div>
     </article>

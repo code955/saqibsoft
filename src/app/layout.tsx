@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { withBasePath } from "@/lib/base-path";
 import "./globals.css";
 
 const sora = Sora({
@@ -25,7 +26,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://saqibsoft.dev"),
+  metadataBase: new URL("https://code955.github.io/saqibsoft/"),
   title: {
     default: "Saqib Soft — Full-Stack Developer",
     template: "%s · Saqib Soft",
@@ -33,15 +34,15 @@ export const metadata: Metadata = {
   description:
     "Saqib Soft builds production web apps and AI-powered products for remote clients across the UK, US, EU, and beyond.",
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    apple: "/profile.png",
+    icon: [{ url: withBasePath("/favicon.svg"), type: "image/svg+xml" }],
+    apple: withBasePath("/profile.png"),
   },
   openGraph: {
     title: "Saqib Soft — Full-Stack Developer",
     description:
       "Software that looks finished and works in production. Remote collaboration from Pakistan for UK, US, and global teams.",
     type: "website",
-    images: ["/profile.png"],
+    images: [withBasePath("/profile.png")],
   },
 };
 

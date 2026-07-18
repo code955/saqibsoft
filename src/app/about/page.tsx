@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatedHeading } from "@/components/AnimatedHeading";
 import { site } from "@/data/site";
+import { withBasePath } from "@/lib/base-path";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function AboutPage() {
           <div className={`${styles.photoWrap} reveal`}>
             <div className={styles.photo}>
               <Image
-                src="/profile.png"
+                src={withBasePath("/profile.png")}
                 alt="Professional portrait for Saqib Soft"
                 width={480}
                 height={480}
