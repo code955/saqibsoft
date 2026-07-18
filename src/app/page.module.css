@@ -1,0 +1,322 @@
+.hero {
+  position: relative;
+  min-height: calc(100svh - 4.65rem);
+  display: flex;
+  align-items: center;
+  padding-block: clamp(2rem, 5vw, 3.5rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.copy {
+  display: grid;
+  gap: 1rem;
+  max-width: 36rem;
+  min-width: 0;
+  z-index: 2;
+}
+
+.kicker {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  color: var(--ink);
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.brandAccent {
+  color: var(--accent);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: var(--ink);
+  max-width: 30rem;
+}
+
+.tagline {
+  color: var(--ink-soft);
+  font-size: clamp(0.98rem, 2vw, 1.08rem);
+  line-height: 1.7;
+  max-width: 32rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.metaDot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.8;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.actions :global(.btn) {
+  flex: 1 1 auto;
+  min-width: min(100%, 11.5rem);
+}
+
+.visual {
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+  z-index: 1;
+}
+
+.portrait {
+  display: grid;
+  justify-items: center;
+  gap: 1.15rem;
+}
+
+.portraitFrame {
+  position: relative;
+  width: min(100%, 268px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--bg-elevated);
+  outline: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  outline-offset: 6px;
+  box-shadow: 0 20px 45px color-mix(in srgb, var(--ink) 14%, transparent);
+}
+
+.portraitFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.portraitCaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0.9rem;
+  text-align: center;
+}
+
+.portraitCaption strong {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.portraitCaption span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.work {
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-elevated) 55%, transparent);
+}
+
+.workInner {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.workTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  align-items: end;
+  margin-bottom: 0.5rem;
+}
+
+.principles {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.principleList {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.principleList li {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.principleList strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+
+.principleList p {
+  color: var(--ink-soft);
+  max-width: 28rem;
+  line-height: 1.65;
+}
+
+.ctaBand {
+  text-align: left;
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  padding: clamp(2.2rem, 5vw, 3.2rem);
+  border-radius: 1.15rem;
+  background: linear-gradient(135deg, #0a1628 0%, #12303a 55%, #0f6e78 140%);
+  color: #f4f8f9;
+  box-shadow: var(--shadow);
+}
+
+.ctaBand h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+  line-height: 1.15;
+}
+
+.ctaBand p {
+  color: color-mix(in srgb, white 78%, transparent);
+  max-width: 34rem;
+  line-height: 1.65;
+}
+
+.ctaBand :global(.btn-primary) {
+  background: #fff;
+  color: #0c1524;
+  box-shadow: none;
+}
+
+.ctaBand :global(.btn-primary:hover) {
+  background: #d5eef0;
+  color: #0c1524;
+}
+
+@media (max-width: 719px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .visual {
+    order: -1;
+    max-width: 100%;
+  }
+
+  .portraitFrame {
+    width: clamp(160px, 42vw, 208px);
+    outline-offset: 5px;
+  }
+
+  .portraitCaption {
+    font-size: 0.9em;
+  }
+
+  .copy {
+    text-align: left;
+  }
+
+  .actions :global(.btn) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.75rem;
+  }
+
+  .brand {
+    font-size: clamp(2.4rem, 5.5vw, 3.4rem);
+  }
+
+  .visual {
+    max-width: 320px;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 3.5rem;
+  }
+
+  .visual {
+    justify-self: end;
+    max-width: 340px;
+  }
+
+  .portraitFrame {
+    width: min(100%, 300px);
+  }
+
+  .principleList {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .principleList li {
+    border-top: 0;
+    padding-top: 0;
+    border-left: 1px solid var(--line);
+    padding-left: 1.35rem;
+  }
+
+  .principleList li:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .ctaBand {
+    grid-template-columns: 1.4fr auto;
+    align-items: end;
+  }
+
+  .ctaBand :global(.btn-primary) {
+    justify-self: end;
+  }
+}

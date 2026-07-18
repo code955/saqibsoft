@@ -1,0 +1,129 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4.65rem;
+  gap: 1rem;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem 1.25rem;
+}
+
+.link {
+  position: relative;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding-block: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: right 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link:hover,
+.active {
+  color: var(--ink);
+}
+
+.link:hover::after {
+  right: 0;
+}
+
+.active::after {
+  right: 0;
+  background: var(--accent);
+}
+
+.cta {
+  margin-left: 0.25rem;
+}
+
+.toggle {
+  display: none;
+  width: 2.55rem;
+  height: 2.55rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  height: 2px;
+  margin: 0.35rem 0;
+  background: var(--ink);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.toggleOpen span:first-child {
+  transform: translateY(4.5px) rotate(45deg);
+}
+
+.toggleOpen span:last-child {
+  transform: translateY(-4.5px) rotate(-45deg);
+}
+
+@media (max-width: 920px) {
+  .toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.15rem;
+    padding: 1rem 1.25rem 1.4rem;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 40px color-mix(in srgb, var(--ink) 8%, transparent);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .link {
+    padding: 0.8rem 0.25rem;
+  }
+
+  .cta {
+    margin: 0.55rem 0 0;
+    width: 100%;
+    justify-content: center;
+  }
+}

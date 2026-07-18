@@ -1,0 +1,283 @@
+.study {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  padding-block: clamp(2.25rem, 5vw, 3.5rem);
+  border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.study:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.visual {
+  min-height: 240px;
+}
+
+.imageFrame {
+  position: relative;
+  height: 100%;
+  min-height: 260px;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  box-shadow: 0 28px 60px color-mix(in srgb, var(--ink) 14%, transparent);
+  border: 1px solid var(--line);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.study:hover .imageFrame {
+  transform: translateY(-4px);
+  box-shadow: 0 34px 70px color-mix(in srgb, var(--ink) 18%, transparent);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 719px) {
+  .visual {
+    display: none;
+  }
+}
+
+.mock {
+  height: 100%;
+  min-height: 260px;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background:
+    linear-gradient(160deg, color-mix(in srgb, var(--study-accent) 18%, #0b1f33), #0b1f33 55%, #13293d);
+  box-shadow: 0 28px 60px color-mix(in srgb, var(--ink) 14%, transparent);
+  border: 1px solid color-mix(in srgb, white 10%, transparent);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.study:hover .mock {
+  transform: translateY(-4px);
+  box-shadow: 0 34px 70px color-mix(in srgb, var(--ink) 18%, transparent);
+}
+
+.mockBar {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1rem;
+  background: color-mix(in srgb, black 22%, transparent);
+}
+
+.mockBar span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, white 28%, transparent);
+  flex-shrink: 0;
+}
+
+.mockBar span:nth-child(1) {
+  background: color-mix(in srgb, #ff6b6b 70%, white 10%);
+}
+
+.mockBar span:nth-child(2) {
+  background: color-mix(in srgb, #ffd166 70%, white 10%);
+}
+
+.mockBar span:nth-child(3) {
+  background: color-mix(in srgb, #63e6be 70%, white 10%);
+}
+
+.mockUrl {
+  flex: 1;
+  height: 1.3rem;
+  margin-left: 0.35rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, white 8%, transparent);
+}
+
+.mockBody {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.mockAside {
+  border-radius: 0.65rem;
+  background: color-mix(in srgb, white 8%, transparent);
+}
+
+.mockChat {
+  display: grid;
+  align-content: end;
+  gap: 0.65rem;
+}
+
+.bubbleA,
+.bubbleB {
+  height: 2.1rem;
+  border-radius: 0.85rem;
+  background: color-mix(in srgb, white 12%, transparent);
+}
+
+.bubbleA {
+  width: 72%;
+}
+
+.bubbleB {
+  width: 58%;
+  justify-self: end;
+  background: color-mix(in srgb, var(--study-accent) 55%, white);
+}
+
+.input {
+  height: 2.4rem;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, white 10%, transparent);
+  border: 1px solid color-mix(in srgb, white 12%, transparent);
+}
+
+.content {
+  display: grid;
+  gap: 1.15rem;
+  align-content: start;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+.badge,
+.badgeMuted {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+}
+
+.badge {
+  color: var(--accent-deep);
+  background: color-mix(in srgb, var(--accent-soft) 75%, transparent);
+}
+
+.badgeMuted {
+  color: var(--muted);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3.4vw, 2.55rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.summary {
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 40rem;
+}
+
+.details {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.details div {
+  display: grid;
+  gap: 0.3rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+}
+
+.details dt {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.details dd {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 38rem;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.35rem;
+  list-style: none;
+}
+
+.stack li {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 0.35rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.stack li:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--accent-deep);
+  transform: translateY(-1px);
+}
+
+.actions {
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 920px) {
+  .study {
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+  }
+
+  .compact {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .details {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .details div {
+    border-top: 0;
+    padding-top: 0;
+    border-left: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+    padding-left: 1rem;
+  }
+
+  .details div:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
