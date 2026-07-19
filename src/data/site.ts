@@ -38,11 +38,23 @@ export const site = {
 export const skills = {
   frontend: ["React", "Next.js", "TypeScript", "JavaScript", "Responsive UI", "Design systems"],
   backend: ["Node.js", "REST APIs", "Auth & sessions", "Databases", "Server-side logic"],
+  cms: [
+    "WordPress theme development",
+    "Custom plugin development",
+    "WooCommerce stores",
+    "Elementor & page builders",
+    "PHP & MySQL",
+  ],
   automation: [
     "AI agents & chatbots",
     "OpenAI / LLM integrations",
     "Workflow automation",
     "Knowledge-based support systems",
   ],
-  delivery: ["Git & GitHub", "Vercel deployment", "Agile milestones", "Client communication"],
+  delivery: [
+    "Git & GitHub",
+    "Cloud hosting & deployment (AWS, Vercel, VPS)",
+    "Agile milestones",
+    "Client communication",
+  ],
 };

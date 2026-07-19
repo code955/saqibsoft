@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const groups = [
   { title: "Frontend", items: skills.frontend },
   { title: "Backend", items: skills.backend },
+  { title: "WordPress & CMS", items: skills.cms },
   { title: "AI Automation", items: skills.automation },
   { title: "Delivery", items: skills.delivery },
 ];
@@ -22,8 +23,8 @@ export default function SkillsPage() {
         <p className="section-kicker reveal">Capabilities</p>
         <AnimatedHeading as="h1" className="page-title" text="Skills used on real projects" />
         <p className="lede reveal" style={{ transitionDelay: "0.1s" }}>
-          A practical stack — chosen for shipping reliable interfaces, APIs, and AI-assisted
-          workflows.
+          A practical stack — chosen for shipping reliable interfaces, APIs, WordPress builds, and
+          AI-assisted workflows, deployed on solid cloud infrastructure.
         </p>
 
         <div className={styles.grid}>
