@@ -7,7 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "next build --webpack && gh-pages -d out -t true -m \"Deploy: static export\""
+    "deploy": "next build --webpack && gh-pages -d out -t -m \"Deploy: static export\" -u \"Saqib Soft <hello@saqibsoft.dev>\""
   },
   "dependencies": {
     "next": "16.2.10",
