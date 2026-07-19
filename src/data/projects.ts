@@ -125,4 +125,28 @@ export const projects: Project[] = [
     url: "https://islahcorp.com/",
     accent: "#0f6e78",
   },
+  {
+    id: "landmark-school",
+    number: "09",
+    title: "Landmark School",
+    category: "Education Website",
+    location: "Pakistan",
+    summary:
+      "A school website with a linked online learning platform, giving students and parents a clear way to reach class resources and updates.",
+    stack: ["Website", "Education Platform"],
+    url: "https://landmark.com.pk/",
+    accent: "#3f8ea6",
+  },
+  {
+    id: "orchard-grammar-school",
+    number: "10",
+    title: "Orchard Grammar School",
+    category: "WordPress Website",
+    location: "Pakistan",
+    summary:
+      "A WordPress-built school website covering academics, admissions, and student life — easy for staff to update without touching code.",
+    stack: ["WordPress", "PHP", "MySQL"],
+    url: "https://ogs.edu.pk/",
+    accent: "#c17b3d",
+  },
 ];
